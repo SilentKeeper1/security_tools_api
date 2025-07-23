@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Security Tools API</title>
+  <link rel="stylesheet" href="/static/style.css" /> </head>
+<body>
+  <h1>🔐Security Tools API</h1>
+
+  <section>
+    <h2>Generate a Password</h2>
+    <button onclick="generatePassword()">Generate</button>
+    <p id="passwordResult"></p>
+  </section>
+
+  <section>
+    <h2>GeoIP Lookup</h2>
+    <input type="text" id="geoipInput" placeholder="Enter IP" />
+    <button onclick="geoipLookup()">Lookup</button>
+    <pre id="geoipResult"></pre>
+  </section>
+
+  <section>
+    <h2>Password Strength</h2>
+    <input type="text" id="pwInput" placeholder="Enter Password">
+    <button onclick="checkStrength()">Check</button>
+    <p id="pwStrengthResult"></p>
+  </section>
+  <script src="/static/script.js"></script>
+</body>
+</html>
