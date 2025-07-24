@@ -10,11 +10,10 @@ app = FastAPI(title="Securiti Tools API")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(BASE_DIR, "templates")
-static_dir = os.path.join(BASE_DIR, "static") # <--- ЦЕЙ ШЛЯХ
+static_dir = os.path.join(BASE_DIR, "static")
 
 templates = Jinja2Templates(directory=templates_dir)
 
-# <--- ЦЕЙ РЯДОК ДУЖЕ ВАЖЛИВИЙ!
 app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
 app.include_router(password.router)
